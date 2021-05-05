@@ -1,0 +1,78 @@
+.portfolioProjectwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 90vh;
+  /* margin: 16vw; */
+}
+
+.projectImg {
+  /* width: 50%; */
+  flex: 1;
+  /* background-color: red; */
+}
+
+
+.projectImg button {
+ border: none;
+ background: none;
+ outline: none;
+ cursor: pointer;
+}
+
+.projectDesc {
+  display: flex;
+ /* padding-bottom: 600px; */
+  width: 50%;
+
+  align-content: center;
+ /* flex: 1; */
+ /* background-color: green; */
+
+}
+
+.projectDesc a {
+  margin-top: 50vh;
+  text-decoration: none;
+}
+
+.projectImg img{
+  width: 70%;
+}
+
+.projectDesc h2 {
+  color: #69ebcf;
+  /* padding-top: 200px; */
+  font-size: 40px;
+  font-family: 'Krona One';
+  /* margin-bottom: 20px; */
+}
+
+.projectDesc li {
+  color: #5efc8d;
+  font-size: 30px;
+  font-weight: 100;
+  list-style: none;
+  margin-top: 10px;
+  margin-left: 1px;
+  top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .rightmenu {
+    display: none;
+  }
+
+  .portfolioProjectwrapper ,.presentation ,.projectDesc  {
+    display: block;
+    
+  }
+
+  .projectDesc {
+    width: 100%;
+    }
+  
+
+}
+
