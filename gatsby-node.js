@@ -46,20 +46,6 @@ exports.createPages = async ({ actions, graphql }) => {
         component: path.resolve(`./src/templates/${node.frontmatter.type}.js`), 
       })
     })
-
-  
-  const perPage = 2 
-  const nbPage = Math.ceil(data.allMarkdownRemark.totalCount / perPage)
-
-  for (let i = 0; i < nbPage ; i++) {
-  createPage({
-    path: i < 1 ? "/the_blog" : `/the_blog/page=${i + 1}`,
-    context : {
-      limit: perPage,
-      skip: i * perPage,
-      },
-    })
-  }
 })
 
 }

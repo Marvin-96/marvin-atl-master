@@ -60,11 +60,9 @@ const theBlog = ({data}) => {
   )}
 
 
-export const pageQuery  = graphql`
-query BlogIndexQuery($limit: Int = 10, $skip: Int = 1) {
+export const pageQuery  = graphql` 
+query BlogIndexQuery  {
   allMarkdownRemark(
-    limit: $limit
-    skip: $skip
     sort: {fields: frontmatter___id, order: DESC}
   ) {
     edges {
