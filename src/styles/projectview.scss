@@ -1,7 +1,7 @@
 
 
 .content   {
-  padding: 100px 16vw 0px 16vw !important;
+  // padding: 100px 16vw 0px 16vw !important;
   font-size: 30px;
 }
 
@@ -21,10 +21,11 @@
 }
 
 .p-role {
-  color: #5efc8d;
+  color: var(--secondaryColor);
   font-size: 17px;
-  border: 1px solid #5efc8d;
-  padding: 5px;
+  border: 1px solid var(--secondaryColor);
+  padding: 15px 0;
+  margin: 30px 0;
   width: 50%;
 }
 
@@ -72,9 +73,10 @@
 .p-project {
   font-size: 11vw;
   margin: 10px 0;
-  color: #5efc8d;
- font-family: 'Krona One', sans-serif;
- font-weight:700;
+  color: var(--secondaryColor);
+ font-family: var(--title);
+ word-break: keep-all;
+ 
 }
 
 .p-pg , .img-pg {
@@ -87,7 +89,7 @@
  font-size: 7vw !important;
  z-index: 12 !important;
  margin-top: 15vw;
- color: #5efc8d;
+ color: var(--secondaryColor);
  font-family: 'Krona One', sans-serif;
  font-weight:700;
  text-decoration: underline;
@@ -95,7 +97,7 @@
 }
 
 .Next-Project-Link h2{
-  color: #5efc8d;
+  color: var(--secondaryColor);
   font-size: 4vw;
   font-family: 'Krona One', sans-serif;
  font-weight:700;
@@ -112,16 +114,20 @@
 }
 
 
+.project-content img {
+  max-width: 100%;
+  margin: 70px 0;
+}
 
 .project-img {
-  /* width: 50%; */
+  
   margin-left: 10vw;
   flex: 1;
   /* background-color: red; */
 }
 
 .project-hr {
-  background-color: #fff;
+  background-color: var(--textColor);
   width: auto;
   height: 0.3vh;
 }
@@ -169,9 +175,9 @@
 
 
 .project-desc li {
-  color: #5efc8d;
+  color: var(--secondaryColor);
   font-family: 'Quicksand';
-  font-size: 20px;
+  font-size: var(--pSize);
   font-weight: 100;
   list-style: none;
   margin-top: 10px;
@@ -179,7 +185,7 @@
 }
 
 .section4 li {
-  color: #5efc8d;
+  color: var(--secondaryColor);
   font-size: 7vw;
   list-style: none;
   font-family: 'Krona One';
@@ -216,6 +222,7 @@
         
         .section1 .content  ,.section2 .content    {
           padding: 100px 4vw ;
+
           }
                 
         .project-desc , .project-img {
@@ -301,9 +308,9 @@
           width: 100%;
         }
         
-         .content   {
-          padding: 100px 10vw 0px 10vw !important;
-        }
+        //  .content   {
+        //   padding: 100px 10vw 0px 10vw !important;
+        // }
 
         .p-role {
           width: 100%;

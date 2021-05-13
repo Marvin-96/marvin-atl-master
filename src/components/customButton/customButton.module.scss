@@ -1,0 +1,17 @@
+// custom button
+.customButtonStyle {
+  border:var(--textColor) solid 3px;
+  padding: 10px;
+  outline: none;
+  color: var(--textColor);
+  font-family: var(--title) ;
+  font-size: var(--pSize);
+  margin-top: 30px ;
+  
+}
+
+.customButtonStyle:hover {
+  background-color: #69ebcf ;
+  color: #000;
+}
+// custom button

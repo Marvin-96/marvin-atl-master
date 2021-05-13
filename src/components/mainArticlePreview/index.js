@@ -1,18 +1,37 @@
 import React from 'react'
-import { mainArticlePreviewBox , blogPresentationTxt, imgContent} from './mainArticlePreview.module.scss'
+import { mainArticlePreviewBox , blogPresentationTxt, imgContent, ArticleDetail, ArticleWrapper ,Articlh3Detail} from './mainArticlePreview.module.scss'
+import Link from "gatsby-link"
 
-const mainArticlePreview = () => {
+const mainArticlePreview = ( {Atitle, Aimg, alink , tag , date}) => {
     return (
+
     <div className={blogPresentationTxt}>
         <h1> Le blog</h1>
-    
+        <p> Bienvenue sur mon blog ! Ici on parle de Design, de tech et bien autres !! </p>
         <div className={mainArticlePreviewBox} id="dcard">
 
-            <p> Bienvenue sur mon blog ! Ici on parle de Design, de tech et bien autres !! </p>
+           
+
+
+       <div className={ArticleWrapper}>   
+       
+       <div className={imgContent}>
+            <Link to={alink}>
+                 <img src={Aimg} alt="" />    
+            </Link>       
+        </div>    
+            <div className={ArticleDetail}> 
+                <Link to={alink}> <h2>  {Atitle} </h2> </Link>
+                <div className={Articlh3Detail}> 
+                    <h3> {tag}  </h3>
+                    <h3> {date} </h3>
+                </div>
+            </div>
+            
+        
+        </div> 
         </div>
 
-        <div className={imgContent}>   <img src="https://source.unsplash.com/random/800x400" alt="" /></div>
-        <div> <h2> Qu'est-ce le design Thinking ?</h2> </div>
     </div>
       
     )

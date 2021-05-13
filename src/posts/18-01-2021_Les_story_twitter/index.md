@@ -10,7 +10,7 @@ frontimage:  ../../media/images/Les-stories-sur-twitter.png
 type: "blog-post"
 isPublished: true
 role: "#Reseaux-Sociaux" 
-situation: "NaN" 
+situation: "0" 
 solution: "NaN" 
 ---
 

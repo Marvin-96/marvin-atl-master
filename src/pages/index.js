@@ -13,6 +13,8 @@ import Link from "gatsby-link"
 // markup
 const IndexPage = ({data}) => {
 
+  const posts = data.allMarkdownRemark.edges;
+
 
   return (
    
@@ -33,7 +35,7 @@ const IndexPage = ({data}) => {
             <div className="presentation-txt" id="introTxt">
               <p className data-scroll data-scroll-speed={1}> Bonjour ! </p>  
               <p className data-scroll data-scroll-speed={2}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio, architecto perspiciatis dolorum fugit, cupiditate enim non tenetur ad tempora vero quis fuga asperiores fugiat. Odit error mollitia doloremque aut!
+               J'aime imaginer, créer et prototyper. 
               </p>
             </div>
           </div>
@@ -43,31 +45,15 @@ const IndexPage = ({data}) => {
         <h2> Mon Portfolio</h2>
 
       </section>
-      {data.allMarkdownRemark.edges.map((post) => (  
-      <section>
-        <div className="content" key={post.node.id} >
+      {posts.map(({node}) => (
+        <section>
+        <div className="content" key={ node.id} >
+        <PortfolioProject  pImg={node.frontmatter.frontimage} pTitle={node.frontmatter.title} pLink={node.frontmatter.path}  /> 
+        </div>
+        </section>
 
-       
-          <div className="portfolioProjectwrapper" id="portfolioProject"  >
-          <div className="projectImg" id="projectImg" data-scroll data-scroll-speed={1}>
-            <Link to={post.node.frontmatter.path}>     
-              <img src={post.node.frontmatter.frontimage} style={{backgroundColor: '#000'}} alt="Black-Mamba-website" /> 
-            </Link>
-          </div>
-          <div className="projectDesc" data-scroll data-scroll-speed={-1} id="projectDesc">
-            <Link to={post.node.frontmatter.path}>
-              <h2 id="projectImg"> {post.node.frontmatter.title}  </h2>
-              <li> Site Web </li>
-              <li> Site Web </li>
-              <li> Site Web </li>
-            </Link>
-          </div>
-        </div>
-               
-          
-          
-        </div>
-      </section> ) )}
+      ) )}
+     
       <section id="contact">
       <Prefooter ></Prefooter>
       </section>

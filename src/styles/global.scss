@@ -24,11 +24,21 @@
   --textColor: rgb(56, 56, 56);
 }
 
-html {
+.dark-theme  , .light-theme   {
   --title: 'Syncopate', sans-serif;
   --text: 'PT Sans Caption', sans-serif;
+  --pSize: 20px;
+  --titleSize: 20px;
+  --portfolioTitleSize: 120px;
 }
 
+@media screen and (max-width: 768px) {
+  .dark-theme  , .light-theme   {
+    --pSize: 30px;
+    --titleSize:20px;
+    --portfolioTitleSize: 50px;
+  }
+}
 
 
 /* Global */
@@ -41,7 +51,7 @@ h1 , h2 {
 
 p {
     color: var(--textColor)!important;
-    font-size: 40px;
+    font-size: var(--pSize);
 
 }
 
@@ -51,6 +61,7 @@ body {
 
   background-color: var(--bgColor)!important;
   overflow-x: hidden;
+
   
 }
 
@@ -87,7 +98,7 @@ section {
     font-family: var( --text);
     text-align: justify;
     list-style: none;
-    margin: 0 10vw 10vw 0 ;
+    // margin: 0 10vw 10vw 0 ;
   }
 
   .presentation {
@@ -170,31 +181,24 @@ section {
     top: 0px;
   }
   
-  @media screen and (max-width: 768px) {
-    .rightmenu {
-      display: none;
-    }
+
+#themeSwitcher {
+  background-color: var(--bgColor);
+}
   
-    .portfolioProjectwrapper ,.presentation ,.projectDesc  {
-      display: block;
-      
-    }
-  
-    .projectDesc {
-      width: 100%;
-      }
-    
-  
-  }
   
   
   // projet portfolio
 
 
+  open-nav {
+    height: 100vh;
+    background-color: var(--bgColor);
+  }
   
 @media screen and (max-width: 768px) {
   .rightmenu {
-    display: none;
+    display: block;
   }
 
   .portfolio-project ,.presentation {
@@ -221,6 +225,57 @@ section {
     word-spacing: 5px;
     word-break: break-all;
 
+}
+
+@keyframes showLinksAnim {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.show-links  {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 15vh;
+  // position: relative;
+  background-color: var(--pimaryColor);
+  overflow-y: hidden;
+  animation: showLinksAnim 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+
+  li {
+    font-size: 20px;
+    // background-color: blue;
+    width: 100vw;
+    height: 12vh;
+    margin-left: 10vw;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleFade {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.link-animation {
+  animation: scaleFade 0.3s ease-in-out forwards;
+  animation-delay: 0.4s;
 }
 
 }

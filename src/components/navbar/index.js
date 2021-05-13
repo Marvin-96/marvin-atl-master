@@ -14,18 +14,25 @@ const navbar = () =>  (
               <Link to="/" className={homeBtn} id="homeLi">
                 <img className={logo} src={Logo} alt="logo" />
               </Link>
-              <div className={rightmenu} id="rightMenu">
-              <BurgerBtn /> 
-                <ul className={upLinkBtn} id="upLinkBtn">
-                  <Link to="/"><li id="homeLi"> Home</li> </Link>
-                  <Link to="/#portfolio"> <li id="portfolioLi"> Portfolio</li> </Link><a href />
-                  <Link to="/#contact">  <li id="contactLi"> Contactez-moi !</li> </Link>
-                  <Link to="/the_blog">  <li id="contactLi"> Mon blog</li> </Link>
-                </ul>
-                <div className={downLinkBtn}> 
-                <ThemeSwitcher></ThemeSwitcher>
-                </div> 
-              </div>
+             
+                <div className={rightmenu} id="rightMenu">
+              
+                  <ul className={upLinkBtn} id="upLinkBtn">
+                    <Link to="/"><li id="homeLi"> Home</li> </Link>
+                    <Link to="/#portfolio"> <li id="portfolioLi"> Portfolio</li> </Link><a href />
+                    <Link to="/#contact">  <li id="contactLi"> Contactez-moi !</li> </Link>
+                    <Link to="/the_blog">  <li id="contactLi"> Mon blog</li> </Link>
+                  
+                    <div className={downLinkBtn}> 
+                  <ThemeSwitcher></ThemeSwitcher>
+                  </div> 
+                  </ul>
+                  
+                  <BurgerBtn /> 
+
+                 
+                </div>
+   
             </nav>
 
 )

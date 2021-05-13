@@ -2,15 +2,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90vw;
+  width: 70vw;
   height: 90vh;
+  // background-color: red;
   /* margin: 16vw; */
 }
 
 .projectImg {
-  /* width: 50%; */
+  width: 100%; 
   flex: 1;
-  /* background-color: red; */
+  // background-color: red; 
+}
+
+
+.projectImg img{
+  width: 100%;
 }
 
 
@@ -23,8 +29,9 @@
 
 .projectDesc {
   display: flex;
- /* padding-bottom: 600px; */
-  width: 50%;
+  // align-items:center; 
+  width: 35%;
+  transform: translateX(-90px);
 
   align-content: center;
  /* flex: 1; */
@@ -37,15 +44,13 @@
   text-decoration: none;
 }
 
-.projectImg img{
-  width: 70%;
-}
 
 .projectDesc h2 {
-  color: #69ebcf;
+  color: var(--textColor);
+  background-color: var(--bgColor);
   /* padding-top: 200px; */
-  font-size: 40px;
-  font-family: 'Krona One';
+  font-size: var(--portfolioTitleSize);
+  text-transform: uppercase;
   /* margin-bottom: 20px; */
 }
 
@@ -73,6 +78,14 @@
     width: 100%;
     }
   
+    .projectDesc {
+      transform: translateX(0px);
+    }
+
+    .portfolioProjectwrapper {
+      width: 90vw;
+     
+    }
 
 }
 

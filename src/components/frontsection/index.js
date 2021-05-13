@@ -23,7 +23,7 @@ const frontSection = () => {
           <h1 data-scroll data-scroll-speed={3}> Marvin <br className={frontH1mobile} />  Mensah. <br />
             Je suis <br /> Front-End <br />
             developper et <br />
-            Webdesigner </h1>
+            UX/UI Designer </h1>
         </div>
       </div>
     )

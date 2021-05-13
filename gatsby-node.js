@@ -30,7 +30,7 @@ exports.createPages = async ({ actions, graphql }) => {
             }
             excerpt
           }
-          totalCount
+          
         }
       }
     }
@@ -39,13 +39,35 @@ exports.createPages = async ({ actions, graphql }) => {
     if (res.errors) {
       return Promise.reject(res.errors)
     }
+ // Create Templates pages
+ const posts = res.data.allMarkdownRemark.edges
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(`./src/templates/${node.frontmatter.type}.js`), 
       })
     })
+
+  // Create blog-list pages
+
+  const postsPerPage = 4
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/the_blog` : `/the_blog/${i + 1}`,
+      component: path.resolve("./src/pages/the_blog.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
+
+
 })
 
 }

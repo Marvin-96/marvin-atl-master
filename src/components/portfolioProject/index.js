@@ -1,21 +1,22 @@
 import React from 'react'
+import Link from "gatsby-link"
 import { portfolioProjectwrapper, projectImg ,projectDesc} from './portfolioProject.module.scss'
 
-const portfolioProject = (ok) => {
+const portfolioProject = ({pImg , pTitle , pLink }) => {
     return (
       <div className={portfolioProjectwrapper} id="portfolioProject">
       <div className={projectImg} id="projectImg" data-scroll data-scroll-speed={1}>
-        <a href="projets/blackmamba.html">     
-          <img src="https://source.unsplash.com/random/600x900" style={{backgroundColor: '#000'}} alt="Black-Mamba-website" /> 
-        </a>
+        <Link href={pLink}>     
+          <img src={pImg} style={{backgroundColor: '#000'}} alt="Black-Mamba-website" /> 
+        </Link>
       </div>
       <div className={projectDesc} data-scroll data-scroll-speed={-1} id="projectDesc">
-        <a href="projets/blackmamba.html">
-          <h2 id="projectImg">Black Mamba </h2>
+        <Link href={pLink}>
+          <h2 id="projectImg"> {pTitle}</h2>
           <li> Site Web </li>
           <li> Site Web </li>
           <li> Site Web </li>
-        </a>
+        </Link>
       </div>
     </div>
     )

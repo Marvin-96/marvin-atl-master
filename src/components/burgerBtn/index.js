@@ -8,10 +8,19 @@ const BurgerBtn = () =>  {
 
 const [state, setState] = useState('close');
 
-function openBurger() {
+
+function openBurger()  {
 const links = document.querySelector("#rightMenu");
+const upLink = document.querySelector("#upLinkBtn");
+const allUpLink = document.querySelectorAll("#upLinkBtn li");
 setState(state === 'open' ? 'close' : 'open')
-links.classList.toggle('show-links'); 
+upLink.classList.toggle('show-links');
+
+allUpLink.forEach((link) => {
+    link.classList.toggle('link-animation');
+  });
+
+
 }
 
     return(

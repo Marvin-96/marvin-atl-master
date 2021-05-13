@@ -24,7 +24,7 @@ const footer = () => {
           <div className={footerLinks}> 
             <h2> Contacts</h2>
             <ul>
-              <li> <a href="asset/media/CV2_Marvin_Mensah_Web.pdf" id="section3a3">MON CV</a> </li>
+              <li> <a href="asset/media/CV2_Marvin_Mensah_Web.pdf" id="section3a3">marvinmensah@gmail.com</a> </li>
               <li><a> Portfolio</a></li> 
 
             </ul>       
@@ -34,7 +34,8 @@ const footer = () => {
             <h2> Autres</h2>
             <ul>
               <li> <a href="asset/media/CV2_Marvin_Mensah_Web.pdf" id="section3a3">MON CV</a> </li>
-              <li><a> Portfolio</a></li> 
+              <li><a> Dribble</a></li> 
+              <li><a> Instagram</a></li> 
 
             </ul>       
           </div>
