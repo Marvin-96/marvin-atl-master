@@ -12,15 +12,22 @@
 .dark-theme {
   --pimaryColor: rgb(115, 76, 187);
   --secondaryColor: #5efc8d;
-  --bgColor: #000;
-  --textColor:  #fff;
+  --bgColor:  #000;
+  --textColor:  rgb(255, 255, 255);
   
 }
 
+// .light-theme {
+//   --pimaryColor:#69ebcf;
+//   --secondaryColor: brown;
+//   --bgColor: rgb(255, 237, 213);
+//   --textColor: rgb(56, 56, 56);
+// }
+
 .light-theme {
-  --pimaryColor:#69ebcf;
+  --pimaryColor:#000000;
   --secondaryColor: brown;
-  --bgColor: rgb(255, 237, 213);
+  --bgColor: #D4D4D4;
   --textColor: rgb(56, 56, 56);
 }
 

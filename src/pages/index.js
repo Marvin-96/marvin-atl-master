@@ -10,22 +10,31 @@ import moi from "../images/marvinmensah.jpg"
 import { graphql } from "gatsby"
 import Link from "gatsby-link"
 
+
+
+
+
+
 // markup
 const IndexPage = ({data}) => {
 
   const posts = data.allMarkdownRemark.edges;
 
+  function toggle() {
+    alert('ok');
+  }
 
   return (
    
     <main>
       <Layout>
 
-      <div class="screen" id="screenScrolling">
+      <div  class="screen" id="screenScrolling">
         <Navbar></Navbar>    
         <FrontSection> </FrontSection>
       </div>
 
+      <button type="button" onClick={toggle}> ok </button>
       <section>
         <div className="content">
           <div className="presentation">
@@ -64,6 +73,10 @@ const IndexPage = ({data}) => {
      </main>
 
   )
+}
+
+const Tete = () => {
+
 }
 
 export const pageQuery  = graphql`

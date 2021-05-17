@@ -52,26 +52,27 @@ class theBlog extends React.Component {
 
 
               <div  className="postsWrapper">
-              <h2> Les derniers Posts</h2>
-              {posts.map(({ node }) => 
-              
-              { if(node.frontmatter.id != 1)
+                {/* <h2> Les derniers Posts</h2> */}
+                {posts.map(({ node }) => 
+                
+                { if(node.frontmatter.id != 1)
 
-                return (
+                  return (
 
-                <div className="postPrev"  key={node.id} >
-                 <img className="img" src={node.frontmatter.frontimage} /> 
-                  <h3> {node.frontmatter.title} </h3>
-                  <div className="postSupElement">
-                  <h5>{node.frontmatter.role}</h5>
-                  <h5> - {node.frontmatter.date}</h5>
+                  <div className="postPrev"  key={node.id} >
+                      <img className="img" src={node.frontmatter.frontimage} /> 
+                        <h3> {node.frontmatter.title} </h3>
+                        <div className="postSupElement">
+                        <h5>{node.frontmatter.role}</h5>
+                        <h5> - {node.frontmatter.date}</h5>
                   </div>
-                  {/* <CustomButton path={node.frontmatter.path}> </CustomButton> */}
-                  <Link className="customButton" to={node.frontmatter.path}> Lire la suite</Link>
+                    {/* <CustomButton path={node.frontmatter.path}> </CustomButton> */}
+                    <Link className="customButton" to={node.frontmatter.path}> Lire la suite</Link>
 
               </div>
                  )})}
 
+{/* 
 <ul className="pagination"
 
         >
@@ -104,7 +105,7 @@ class theBlog extends React.Component {
               Page Suivante
             </Link>
           )}
-        </ul>
+        </ul> */}
           </div>
           
           </div>

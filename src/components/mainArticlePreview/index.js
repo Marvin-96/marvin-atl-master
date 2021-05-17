@@ -19,13 +19,15 @@ const mainArticlePreview = ( {Atitle, Aimg, alink , tag , date}) => {
             <Link to={alink}>
                  <img src={Aimg} alt="" />    
             </Link>       
-        </div>    
+        </div>   
+
             <div className={ArticleDetail}> 
                 <Link to={alink}> <h2>  {Atitle} </h2> </Link>
                 <div className={Articlh3Detail}> 
                     <h3> {tag}  </h3>
                     <h3> {date} </h3>
                 </div>
+                <Link className="customButton"> Lire la suite</Link>
             </div>
             
         

@@ -7,7 +7,11 @@ import BurgerBtn from '../burgerBtn'
 import '../../styles/global.scss'
 
 
-const navbar = () =>  (
+const navbar = () =>  {
+
+
+
+  return (
 
 
             <nav className={menu}>
@@ -22,7 +26,7 @@ const navbar = () =>  (
                     <Link to="/#portfolio"> <li id="portfolioLi"> Portfolio</li> </Link><a href />
                     <Link to="/#contact">  <li id="contactLi"> Contactez-moi !</li> </Link>
                     <Link to="/the_blog">  <li id="contactLi"> Mon blog</li> </Link>
-                  
+                
                     <div className={downLinkBtn}> 
                   <ThemeSwitcher></ThemeSwitcher>
                   </div> 
@@ -35,6 +39,6 @@ const navbar = () =>  (
    
             </nav>
 
-)
+)}
 
 export default navbar
